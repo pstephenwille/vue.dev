@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue.dev</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.js"></script>
+  </head>
+  <body>
+<template id="dev">
+  <h1>dev - {{devtxt}}</h1>
+</template>
+
+<div>
+  <div id="devOutput"></div>
+</div>
+
+<!--<div id="app"></div>-->
+    <!-- built files will be auto injected -->
+
+<script>
+    dev = new Vue({
+      el:'#devOutput',
+      template:'#dev',
+      data:{
+          counter:0,
+          devtxt:'my dev compontent'
+      },
+      created:function(){
+          console.log('......created');
+      }
+    });
+
+</script>
+  </body>
+</html>
